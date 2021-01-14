@@ -127,73 +127,10 @@ class SiteController extends Controller
 
 
 
-
-
     public function eshopper()
     {
         return view('frontend.templates.homeapp');
 
         //   return view('frontend.templates.eshopper');
     }
-
-
-
-    // public function drink()
-    // {
-    //     return view('frontend.templates.drink');
-    // }
-
-    // public function food()
-    // {
-    //     return view('frontend.templates.food');
-    // }
-
-    // public function spesial()
-    // {
-    //     return view('frontend.templates.spesial');
-    // }
-
-
-    // public function loggin()
-    // {
-    //     return view('frontend.templates.loggin');
-    // }
-
-    // public function registter()
-    // {
-    //     return view('frontend.templates.registter');
-    // }
 }
-
-
-
-
-
-// function proses_transaksi
-
- // dd(auth)::id();
-        // dd(auth()->id());
-        // print_r(auth());
-        // $model = new Produk();
-
-        // $produk = $model->detail($request->produk_id);
-
-        // $produk     = DB::table('produk')->where('produk_id', $produk_id)->first();
-        // $this->validate($request, [
-        //     'produk_id'     => 'required',
-        //     'nama_produk'   => 'required|min:2',
-        //     'kabupaten_id'  => 'required',
-        //     'kota_id'       => 'required',
-        //     'provinsi_id'   => 'required',
-        //     'qty'           => 'required|numeric',
-        //     'harga'         => 'required|numeric',
-        //     'no_rekening'   => 'required',
-        //     'transfer'      => 'required',
-        // ]);
-
-            // $data = array(
-        //     'produk'  => $produk,
-        //     'query'   => $query,
-        // );
-
-        //  return redirect('oke');
