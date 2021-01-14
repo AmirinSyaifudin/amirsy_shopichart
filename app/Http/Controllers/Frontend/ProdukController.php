@@ -98,19 +98,20 @@ class ProdukController extends Controller
 
     public function addchartproduk(Request $request, $produk_id)
     {
-        $produk = Produk::find($produk_id);
-        $users =  auth()->user()->id;
+        // $produk = Produk::find($produk_id);
+        // $users =  auth()->user()->id;
 
-        Cart::session($user_id)->add(array(
-            'user_id'       => auth::id(),
-            'nama_produk'   => $request->nama_produk,
-            'harga'         => $request->harga,
-            'qty'           => $request->qty,
-            'keteranan'     => $request->keterangan,
-            'katagori_id'   => $request->katagori_id
-        ));
+        // Cart::session($user_id)->add(array(
+        //     'user_id'       => auth::id(),
+        //     'nama_produk'   => $request->nama_produk,
+        //     'harga'         => $request->harga,
+        //     'qty'           => $request->qty,
+        //     'keteranan'     => $request->keterangan,
+        //     'katagori_id'   => $request->katagori_id
+        // ));
 
-        return redirect('/frontend/product', ['cart', $chart, 'produk', $produk, 'users', $user_id]);
+        // return redirect('/frontend/product', ['cart', $chart, 'produk', $produk, 'users', $user_id]);
+        return redirect('/frontend/product');
     }
 
 
@@ -128,36 +129,6 @@ class ProdukController extends Controller
 
     public function listproduk($produk_id)
     {
-
-        // $transaksi =  DB::table('transaksi')
-        //     ->join('produk', 'transaksi.produk_id', '=', 'produk.produk_id')
-        //     ->join('kabupaten', 'transaksi.kabupaten_id', '=', 'kabupaten.kabupaten_id')
-        //     ->join('provinsi', 'transaksi.provinsi_id', '=', 'provinsi.provinsi_id')
-        //     ->join('kota', 'transaksi.kota_id', '=', 'kota.kota_id')
-        //     ->join('users', 'transaksi.user_id', '=', 'users.id')
-        //     ->select(
-        //         'transaksi.nama',
-        //         'transaksi.no_telpon',
-        //         'transaksi.no_rekening',
-        //         'transaksi.tanggal',
-        //         'transaksi.transfer',
-        //         'transaksi.kode_pos',
-        //         'transaksi.pengirim',
-        //         'transaksi.kode_transaksi',
-        //         'transaksi.alamat',
-        //         'transaksi.keterangan',
-        //         'produk.produk_id',
-        //         'produk.nama_produk',
-        //         'kabupaten.kabupaten_id',
-        //         'kabupaten.nama_kabupaten',
-        //         'provinsi.provinsi_id',
-        //         'provinsi.nama_provinsi',
-        //         'kota.kota_id',
-        //         'kota.nama_kota',
-        //         'users.id',
-        //         'users.name'
-        //     )
-        //     ->get();
 
         $transaksi = DB::table('transaksi')
             ->join('produk', 'transaksi.produk_id', '=', 'produk.produk_id')
