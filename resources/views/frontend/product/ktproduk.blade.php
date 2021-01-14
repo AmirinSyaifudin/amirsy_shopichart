@@ -11,13 +11,11 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-
                                     @foreach ($katagori as $kt)
                                         <ul>
                                             <li><a href=" {{ route('produk.ktproduk', $kt->katagori_id) }} "> {{ $kt->nama_katagori }} </a></li>
                                         </ul>
                                     @endforeach
-
                                 </h4>
                             </div>
                             <div id="sportswear" class="panel-collapse collapse">
@@ -27,9 +25,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div><!--/category-products-->
-
                 </div>
             </div>
 
@@ -53,7 +49,8 @@
                                             <h2>{{ 'Rp.'. number_format ($pd->harga) . "  "  }}</h2>
                                             <p>Nama Produk : {{ $pd->nama_produk }}</p>
                                             <p>Quantity :  {{ $pd->qty }}</p>
-                                            <a href="{{ route('site.transaksi', $pd->produk_id) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ORDER PRODUK</a>
+                                            {{--  <a href="{{ route('site.transaksi', $pd->produk_id) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>MASUKKAN KERANJANG</a>  --}}
+                                            <a href="{{ url('/produk/addchartproduk', $pd->produk_id) }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>MASUKKAN KERANJANG</a>
                                         </div>
                                     </div>
                             </div>

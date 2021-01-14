@@ -111,7 +111,10 @@ class ProdukController extends Controller
         // ));
 
         // return redirect('/frontend/product', ['cart', $chart, 'produk', $produk, 'users', $user_id]);
-        return redirect('/frontend/product');
+        // return redirect('/frontend/product');
+
+        // dd($produk);
+        return view('frontend.product.chart');
     }
 
 
