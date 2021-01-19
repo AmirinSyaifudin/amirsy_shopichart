@@ -133,10 +133,25 @@ class ProdukController extends Controller
 
     public function cart()
     {
-        $chart = session("cart");
+
+        $produk = Produk::find($request->produk_id);
+        $users =  auth()->user()->id;
+
+        $param = [
+            'id'                => time(),
+            'nama_produk'       => $request->nama_produk,
+            'harga'             => $request->harga,
+            'qty'               => $request->qty,
+            // 'attributes'     => array(),
+            'produk'            => $produk,
+        ];
+
+        Cart::session($users)->add($param);
+        return redirect('cart')
+            ->with('sukses', 'Dimasukkna ke dalam keranjang');
+        //  $chart = session("cart");
 
         return view('frontend.product.chart', $chart);
-        // return view('frontend.product.chart', $chart)->with("cart", $chart);
     }
 
     public function delete()
