@@ -3,7 +3,7 @@
 
 <section id="cart_items">
     <div class="container">
-        <h2 class="title text-center">chart produk</h2>
+        <h1 class="title text-center">LIST CHAR PRPDUK</h1>
 
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
