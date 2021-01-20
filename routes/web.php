@@ -32,6 +32,8 @@ Route::post('/transaksi/proses_transaksi', 'Frontend\\SiteController@proses_tran
 // KONTAK
 Route::get('/kontak', 'Frontend\\SiteController@kontak');
 
+Route::get('/youtube', 'Frontend\\SiteController@youtube');
+
 // BLOG
 Route::get('/blog', 'Frontend\\SiteController@blog');
 
