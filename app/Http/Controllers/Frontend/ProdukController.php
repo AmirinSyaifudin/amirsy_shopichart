@@ -98,21 +98,22 @@ class ProdukController extends Controller
 
     public function addchartproduk(Request $request, $produk_id)
     {
-        $produk = Produk::find($request->produk_id);
+        // $produk = Produk::find($request->$produk_id);
+        $produk     = DB::table('produk')->where('produk_id', $produk_id)->first();
         $users =  auth()->user()->id;
 
-        $param = [
-            'id'                => time(),
-            'nama_produk'       => $request->nama_produk,
-            'harga'             => $request->harga,
-            'qty'               => $request->qty,
-            // 'attributes'     => array(),
-            'produk'            => $produk,
-        ];
+        // $param = [
+        //     'id'                => time(),
+        //     'nama_produk'       => $request->nama_produk,
+        //     'harga'             => $request->harga,
+        //     'qty'               => $request->qty,
+        //     // 'attributes'     => array(),
+        //     'produk'            => $produk,
+        // ];
 
-        Cart::session($users)->add($param);
-        return redirect('cart')
-            ->with('sukses', 'Dimasukkna ke dalam keranjang');
+        // Cart::session($users)->add($param);
+        // return redirect('cart')
+        //     ->with('sukses', 'Dimasukkna ke dalam keranjang');
 
         // Cart::session($user_id)->add(array(
         //     'user_id'       => auth::id(),
@@ -126,8 +127,8 @@ class ProdukController extends Controller
         // return redirect('/frontend/product', ['cart', $chart, 'produk', $produk, 'users', $user_id]);
         // return redirect('/frontend/product');
 
-        // dd($produk);
-        //  return view('frontend.product.chart');
+        dd($produk, $users);
+        return view('frontend.product.chart');
     }
 
 
