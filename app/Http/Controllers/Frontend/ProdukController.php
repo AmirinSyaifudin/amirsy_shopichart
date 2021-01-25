@@ -102,14 +102,26 @@ class ProdukController extends Controller
         $produk     = DB::table('produk')->where('produk_id', $produk_id)->first();
         $users =  auth()->user()->id;
 
-        // $param = [
-        //     'id'                => time(),
-        //     'nama_produk'       => $request->nama_produk,
-        //     'harga'             => $request->harga,
-        //     'qty'               => $request->qty,
-        //     // 'attributes'     => array(),
-        //     'produk'            => $produk,
-        // ];
+        $param = [
+            'id'                => time(),
+            'nama_produk'       => $request->nama_produk,
+            'harga'             => $request->harga,
+            'qty'               => $request->qty,
+            // 'attributes'     => array(),
+            'produk'            => $produk,
+        ];
+
+        // Cart::session($users)->add($param);
+        $data = array(
+            'produk'        => $produk,
+            'users'         => $users,
+            'param'         => $param
+        );
+
+        // dd($produk, $users);
+        return view('frontend.product.chart', $data)
+            ->with('sukses', 'Produk Di masukkan ke Keranjang Belanja');
+        //return view('frontend.product.chart');
 
         // Cart::session($users)->add($param);
         // return redirect('cart')
@@ -124,11 +136,20 @@ class ProdukController extends Controller
         //     'katagori_id'   => $request->katagori_id
         // ));
 
+        // $param = [
+        //     'id'                => time(),
+        //     'nama_produk'       => $request->nama_produk,
+        //     'harga'             => $request->harga,
+        //     'qty'               => $request->qty,
+        //     // 'attributes'     => array(),
+        //     'produk'            => $produk,
+        // ];
+
         // return redirect('/frontend/product', ['cart', $chart, 'produk', $produk, 'users', $user_id]);
         // return redirect('/frontend/product');
 
-        dd($produk, $users);
-        return view('frontend.product.chart');
+        // dd($produk, $users);
+        // return view('frontend.product.chart');
     }
 
 
