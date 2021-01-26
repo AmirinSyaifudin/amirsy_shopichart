@@ -119,7 +119,7 @@ class ProdukController extends Controller
         );
 
         // dd($produk, $users);
-        return view('frontend.product.chart', $data)
+        return view('frontend.product.listproduct', $data)
             ->with('sukses', 'Produk Di masukkan ke Keranjang Belanja');
         //return view('frontend.product.chart');
 

@@ -18,47 +18,39 @@
                     </tr>
                 </thead>
 
-                <tbod>
-
-
-
                     <tr>
                         <td colspan="4">&nbsp;</td>
                         <td colspan="2">
                             <table class="table table-condensed total-result">
-                                <tbody><tr>
-                                    <td>Jumlah Total Produk : </td>
-                                    <td>$59</td>
-                                </tr>
-                                {{-- <tr>
-                                    <td>Exo Tax</td>
-                                    <td>$2</td>
-                                </tr> --}}
-                                <tr class="shipping-cost">
-                                    <td>Pengiriman : </td>
-                                    <td>Free</td>
-                                </tr>
-                                <tr class="shipping-cost">
-                                    <td>Transfer  : </td>
-                                    <td>Free</td>
-                                </tr>
-                                <tr>
-                                    <td>Total Produk</td>
-                                    <td><span>$61</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+
+                                    <tr>
+                                        <td>Jumlah Total Produk : </td>
+                                        <td>$59</td>
+                                    </tr>
+
+                                    <tr class="shipping-cost">
+                                        <td>Pengiriman : </td>
+                                        <td>Free</td>
+                                    </tr>
+
+                                    <tr class="shipping-cost">
+                                        <td>Transfer  : </td>
+                                        <td>Free</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Total Produk</td>
+                                        <td><span>$61</span></td>
+                                    </tr>
+
+
+                            </table>
                         </td>
                     </tr>
-
-
-
-                </tbod                                                                                                                                                                                                                                                                                                                                                      y>
+                                                                                                                                                                                                                                                                                                                                            y>
             </table>
-
-
         </div>
-
         <tr>
             <a class="btn btn-primary right" href="">ORDER SEKARANG</a>
             <a class="btn btn-primary right" href="">KEMBALI</a>
