@@ -19,6 +19,18 @@
                         @enderror
                     </div>
 
+                    <div class="form-group @error('katagori') has-error @enderror">
+                        <label for="">NAMA KATAGORI</label>
+                        <select name="katagori_id" id="" class="form-control select2">
+                         @foreach ($katagori as $ktgr)
+                                <option value="{{ $ktgr->katagori_id}}">{{ $ktgr->nama_katagori}}</option>
+                         @endforeach
+                            @error('katagori')
+                                <span class="help-block">{{ $message}}</span>
+                            @enderror
+                        </select>
+                    </div>
+
                     <div class="form-group @error('qty') has-error @enderror">
                         <label for="">QTY</label>
                         <!-- //value="{{ old('qty')}}"  , Validasi untuk tetap menampilkan nilai di form-->
@@ -28,8 +40,6 @@
                             <span class="help-block">{{ $message}}</span>
                         @enderror
                     </div>
-
-
 
                     <div class="form-group @error('harga') has-error @enderror">
                         <label for="">HARGA</label>
@@ -41,45 +51,12 @@
                         @enderror
                     </div>
 
-
-
-                    {{--  <div class="form-group{{$errors->has('cover') ? 'has-error' : ''}}">
-                        <label for="exampleFormControlTextarea1">COVER</label>
-                        <input type="file" name="cover" class="form-control">
-                        @if($errors->has('cover'))
-                            <span class="help-block">{{$errors->first('cover')}}</span>
-                        @endif
-                    </div>  --}}
-
-                    {{--  <div class="form-group{{$errors->has('cover') ? 'has-error' : ''}}">
-                        <label for="exampleFormControlTextarea1">COVER</label>
-                        <input type="file" name="cover" class="form-control">
-                        @if($errors->has('cover'))
-                            <span class="help-block">{{$errors->first('cover')}}</span>
-                        @endif
-                    </div>  --}}
-
-
-
                     <div class="form-group @error('cover') has-error @enderror">
                         <label for="">COVER</label>
                         <input type="file" name="cover" class="form-control">
                         @error('cover')
                             <span class="help-block">{{ $message}}</span>
                         @enderror
-                    </div>
-
-
-                    <div class="form-group @error('katagori') has-error @enderror">
-                        <label for="">NAMA KATAGORI</label>
-                        <select name="katagori_id" id="" class="form-control select2">
-                         @foreach ($katagori as $ktgr)
-                                <option value="{{ $ktgr->katagori_id}}">{{ $ktgr->nama_katagori}}</option>
-                         @endforeach
-                            @error('katagori')
-                                <span class="help-block">{{ $message}}</span>
-                            @enderror
-                        </select>
                     </div>
 
                     <div class="form-group">

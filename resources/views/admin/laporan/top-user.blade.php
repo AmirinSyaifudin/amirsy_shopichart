@@ -1,11 +1,11 @@
 @extends('admin.templates.default')
 @section('content')
-<h1> Data User </h1>
+<h1> LAPORAN DATA USER</h1>
 
 <!-- /.box-header -->
     <div class="box">
         <div class="box-header">
-                <h3 class="box-title">DATA PROVINSI</h3><br><br>
+                <h3 class="box-title">DATA USER</h3><br><br>
 
             </div>
             <div class="box-body">
@@ -30,7 +30,7 @@
                             $no = (env('PAGINATION_ADMIN') * $page) - (env('PAGINATION_ADMIN') -1);
                          @endphp  --}}
 
-                         @foreach ($transaksi as $use)
+                         @foreach ($users as $use)
                             <tr>
                                 <td>{{ $loop -> index +1 }}</td>
                                 <td>{{ $use->name }}</td>
@@ -43,18 +43,12 @@
             </table>
         </div>
     </div>
-
-
 @endsection
 
 @push('scripts')
     <script>
         $(function () {
             $('#dataTable').DataTable({
-
-
-
-
 
 
             });

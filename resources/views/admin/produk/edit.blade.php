@@ -11,6 +11,7 @@
              method="POST" enctype="multipart/form-data">
              @csrf
              @method("PUT")
+
              {{-- <input type="hidden" name="id_produk" value="{{ $produk->produk_id }}"> --}}
             <div class="form-group @error('nama_produk') has-error @enderror">
                 <label for="">NAMA PRODUK</label>
@@ -62,7 +63,6 @@
 
             <div class="form-group @error('keterangan') has-error @enderror">
                 <label for="">KETERANGAN</label>
-
                 <textarea name="keterangan" id="" row="3" class="form-control"
                 placeholder="Masukkan Deskripsi Buku">{{ $produk->keterangan ?? old('keterangan') }}</textarea>
                 @error('keterangan')

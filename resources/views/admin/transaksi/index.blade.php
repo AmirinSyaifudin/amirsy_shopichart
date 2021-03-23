@@ -13,11 +13,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>MEMBER</th>
-                            <th>TANGGAL </th>
-                            {{--  <th>NAMA PRODUK</th>  --}}
-                            <th>STATUS </th>
-                            <th> </th>
+                            <th>NAMA CUSTOMER</th>
+                            <th>TANGGAL TRANSAKSI</th>
+                            <th>INVOICE</th>
+                            <th> ACTION </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,7 +27,7 @@
                             <td width='10'>{{ $ts->tanggal }} </td>
                             {{--  <td width='10'>{{ $ts->nama_produk }} </td>   --}}
                             {{-- <td width='5'> <a href="{{ route('admin.transaksi.detail', $ts->transaksi_id) }}" class="btn btn-info">Detail</a> </td> --}}
-                            <td width='5'> <a href="{{ route('admin.transaksi.transaksi_detail', $ts->transaksi_id) }}" class="btn btn-info">Detail</a> </td>
+                            <td width='5'> <a href="{{ route('admin.transaksi.transaksi_detail', $ts->transaksi_id) }}" class="btn btn-info">Invoice</a> </td>
                             <td width='5'>
                                 <form action="{{ route('admin.transaksi.destroy', $ts->transaksi_id) }}" method="post" style="display:inline;">
                                     {{ csrf_field() }}

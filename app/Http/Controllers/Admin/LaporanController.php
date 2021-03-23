@@ -66,27 +66,6 @@ class LaporanController extends Controller
         );
         // dd($data);
         return view('admin.laporan.top-user', $data);
-        // return view('admin.transaksi.index', $data);
-
-
-        // $user = DB::table('users')
-        //     ->select(
-        //         'users.*',
-        //         'users.id',
-        //         'users.name',
-        //         'users.email'
-        //     )
-        //     ->orderBy('name', 'ASC')
-        //     ->get();
-        // // dd($user);
-        // $transaksi = DB::table('transaksi')->get();
-
-        // $data = array(
-        //     'user'          => $user,
-        //     'transaksi'     => $transaksi
-        // );
-        // //  dd($data);
-        // return view('admin.laporan.top-user', $data);
     }
 
 
