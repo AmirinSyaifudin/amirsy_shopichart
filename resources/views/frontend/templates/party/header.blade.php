@@ -5,7 +5,7 @@
                 <div class="col-sm-6">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> 082333858461</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> 081222213401</a></li>
                             <li><a href="#"><i class="fa fa-envelope"></i> amirinsyaifudin6@gmail.com</a></li>
                         </ul>
                     </div>

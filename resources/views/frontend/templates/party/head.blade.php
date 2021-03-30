@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Home | E-Shopper</title>
+<title>Home | ShopeeChart</title>
 <link href="{{ asset('eshopper/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('eshopper/css/font-awesome.min.css') }}" rel="stylesheet">
 <link href="{{ asset('eshopper/css/prettyPhoto.css') }}" rel="stylesheet">
